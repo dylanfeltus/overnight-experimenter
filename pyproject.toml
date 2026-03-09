@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "overnight-experimenter"
+version = "0.1.0"
+description = "Give an AI agent a codebase, a metric, and a time budget — let it run experiments autonomously overnight."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    { name = "Dylan Feltus" }
+]
+keywords = ["ai", "automation", "experiments", "coding-agent", "autonomous"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Homepage = "https://github.com/dylanfeltus/overnight-experimenter"
+Repository = "https://github.com/dylanfeltus/overnight-experimenter"
+
+[project.scripts]
+overnight = "overnight_experimenter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+overnight_experimenter = ["templates/*"]
